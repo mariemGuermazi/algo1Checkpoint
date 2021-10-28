@@ -1,0 +1,25 @@
+ALGORITHM sentence_CP
+VAR
+    sntnc : STRING;
+    i, L, nbrWords, nbrVowels : INTEGER := 0;
+BEGIN
+    write ("the best in the world");
+    read (sntnc);
+    FOR i FROM 0 TO sntnc.length STEP i++  DO
+        IF (sntnc [i] != " " OR sntnc[i] = ".") THEN
+            L := L + 1;
+        END_IF
+
+        IF (sntnc[i] = " ") THEN
+            nbrWords := nbrWords + 1;
+        END_IF
+
+        IF (sntnc [i] = ['a','e','i','o','u','y']) THEN
+            nbrVowels := nbrVowels + 1;
+        END_IF
+        write(L);
+        write(nbrWords);
+        write(nbrVowels);
+    END_FOR
+END
+
