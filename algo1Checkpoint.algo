@@ -5,7 +5,7 @@ VAR
 BEGIN
     write ("the best in the world");
     read (sntnc);
-    FOR i FROM 0 TO sntnc.length STEP i++  DO
+    FOR i FROM 0 TO sntnc.length-1 STEP i++  DO
         IF (sntnc [i] != " " OR sntnc[i] = ".") THEN
             L := L + 1;
         END_IF
